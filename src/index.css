@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+/* Scrollbalken global ausblenden, Scrollen weiterhin möglich */
+/* Für WebKit-Browser (Chrome, Safari, neuere Edge) */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+div::-webkit-scrollbar {
+  /* Falls Sie es auch für generische Divs wollen, die scrollen */
+  display: none;
+}
+
+/* Für Firefox */
+html,
+body,
+.hide-scrollbar {
+  /* .hide-scrollbar ist eine optionale Klasse für spezifische Elemente */
+  scrollbar-width: none;
+}
+
+/* Für ältere Edge und IE */
+html,
+body,
+.hide-scrollbar {
+  -ms-overflow-style: none;
+}
+
+/* Optionale Utility-Klasse, falls Sie es nur auf bestimmte Elemente anwenden möchten */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
